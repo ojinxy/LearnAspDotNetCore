@@ -1,0 +1,23 @@
+﻿@model LearnAspDotNetCore.Models.TestComposite
+
+@{
+    ViewData["Title"] = "Questions Day 1";
+}
+@using (Html.BeginForm("Questions_Day_1_q1", "Question", FormMethod.Post))
+{
+<br/>
+@Html.TextBoxFor(model => model.test.Title)
+<br/>
+<!--<a asp-area="" asp-controller="Question" asp-action="Questions_Day_1_q1">Submit</a>-->
+<button type="submit">Subscribe</button>
+<h3>Test Values</h3>
+    foreach (var item in Model.tests)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)<br/>                    
+            </td>
+
+        </tr>
+    }
+}

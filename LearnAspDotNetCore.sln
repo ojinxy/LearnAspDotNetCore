@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnAspDotNetCore", "LearnAspDotNetCore\LearnAspDotNetCore.csproj", "{FEBFB5FF-F462-49DA-88DA-03984E348CA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnAspDotNetCoreTest", "LearnAspDotNetCoreTest\LearnAspDotNetCoreTest.csproj", "{2F896CCA-BC6F-497B-B3C8-C5768AD18FE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEBFB5FF-F462-49DA-88DA-03984E348CA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEBFB5FF-F462-49DA-88DA-03984E348CA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEBFB5FF-F462-49DA-88DA-03984E348CA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEBFB5FF-F462-49DA-88DA-03984E348CA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F896CCA-BC6F-497B-B3C8-C5768AD18FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F896CCA-BC6F-497B-B3C8-C5768AD18FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F896CCA-BC6F-497B-B3C8-C5768AD18FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F896CCA-BC6F-497B-B3C8-C5768AD18FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

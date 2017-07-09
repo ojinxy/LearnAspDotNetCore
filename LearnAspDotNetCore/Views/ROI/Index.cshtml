@@ -1,0 +1,13 @@
+﻿@model LearnAspDotNetCore.Models.Roi
+<br/>
+@using (Html.BeginForm("Calculate", "Roi", FormMethod.Post))
+{
+    <span>Cost of Investment :</span> @Html.TextBoxFor(@model => model.CostOfInvestment)
+    <br/>
+    <span>Gain from Investment :</span> @Html.TextBoxFor(@model => model.GainFromInvestment)
+    <br/>
+    <span>ROI :</span> @Html.DisplayFor(@model => model.RoiValue)
+    <br/>
+    <button type="submit">Calculate</button>
+}
+

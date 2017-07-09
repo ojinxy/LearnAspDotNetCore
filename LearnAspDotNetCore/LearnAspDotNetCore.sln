@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 15.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnAspDotNetCore", "LearnAspDotNetCore.csproj", "{05FD96BB-73BB-4DA1-92B4-AC5AE8C9CA14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseObjects", "DatabaseObjects\DatabaseObjects.csproj", "{EBB13829-421B-4876-A857-FCE01212220F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05FD96BB-73BB-4DA1-92B4-AC5AE8C9CA14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05FD96BB-73BB-4DA1-92B4-AC5AE8C9CA14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05FD96BB-73BB-4DA1-92B4-AC5AE8C9CA14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05FD96BB-73BB-4DA1-92B4-AC5AE8C9CA14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBB13829-421B-4876-A857-FCE01212220F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBB13829-421B-4876-A857-FCE01212220F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBB13829-421B-4876-A857-FCE01212220F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBB13829-421B-4876-A857-FCE01212220F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

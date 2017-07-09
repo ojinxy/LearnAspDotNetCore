@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>netcoreapp1.1</TargetFramework>
+		<PreserveCompilationContext>true</PreserveCompilationContext>
+		<RuntimeIdentifiers>win7-x64;win7-x86;ubuntu.16.04-x64;osx.10.12-x64</RuntimeIdentifiers>
+		<SuppressDockerTargets>True</SuppressDockerTargets>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
+		<PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="1.1.2" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.2" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="Views\Question\" />
+		<Folder Include="Models\" />
+		<Folder Include="Data\" />
+		<Folder Include="Views\ROI\" />
+	</ItemGroup>
+	<ItemGroup>
+		<DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="1.0" />
+		<DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.0.0" />
+		<DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.0.0" />
+		<DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="1.0.0-msbuild2-final" />
+		<DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0-msbuild2-final" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="proxy.conf" />
+	  <None Remove="nginx.conf" />
+	  <None Remove="DockerNginx\Dockerfile" />
+	  <None Remove="DockerNginx\nginx %28copy%29.conf" />
+	  <None Remove="DockerNginx\Dockerfile.txt" />
+	  <None Remove="DockerNginx\nginx.conf" />
+	  <None Remove="DockerNginx\.DS_Store" />
+	  <None Remove="DockerNginx\proxy.conf" />
+	</ItemGroup>
+</Project>

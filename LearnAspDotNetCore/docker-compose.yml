@@ -1,0 +1,17 @@
+﻿version: '2'
+services:
+    learnaspnetcore-service:
+        container_name: learnaspnetcore
+        build: .
+
+    learnaspnetcore-service1:
+        container_name: learnaspnetcore1
+        build: .
+
+    nginx-service:
+        container_name: learnaspnginx
+        image: nginx
+        ports:
+            - "8080:8080"
+        volumes:
+            - ./nginx.conf:/etc/nginx/nginx.conf

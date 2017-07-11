@@ -16,6 +16,7 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Tools\" />
+    <Folder Include="Logics\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LearnAspDotNetCore\LearnAspDotNetCore.csproj" />

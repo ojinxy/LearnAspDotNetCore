@@ -1,0 +1,47 @@
+﻿@model LearnAspDotNetCore.Models.Question5Model
+
+@{
+    ViewData["Title"] = "Questions";
+}
+@using (Html.BeginForm())
+{
+    <h1>Factorial Calculator</h1>
+    <br/>
+    @Html.LabelFor(m=> m.question)
+    @Html.TextBoxFor(model => model.question )
+    <br/>
+    <br/>
+    @Html.LabelFor(m=> m.duration)
+    @Html.DisplayFor(m => m.duration )
+    <br/>
+
+    if (Model != null)
+    {
+   
+        <h2>Results</h2>
+        <table>
+	    <tr>
+            <th style="width:10em">Thread ID</th>
+    		<th style="width:10em">Answer</th>
+    		<th style="width:10em">Type</th>
+		</tr>
+
+
+            @foreach (var item in Model.question5Results) 
+            {
+	            <tr>
+    		    <td>@Html.DisplayFor(val => item.threadId)</td>
+                <td style="padding-right:5em">@Html.DisplayFor(val => item.answer)</td>
+                <td>@Html.DisplayFor(val => item.solutionType)</td>
+	            </tr>
+            }
+    			
+
+	    </table>
+    }
+    <br/>
+    <input type="submit" value="Thread" formaction="Question5AnswerThread"/>
+    <input type="submit" value="Synchronous" formaction="Question5AnswerSynchronous"/>
+    <input type="submit" value="Asynchronous" formaction="Question5AnswerAsynchronous"/>
+}
+

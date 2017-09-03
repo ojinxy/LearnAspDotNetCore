@@ -1,0 +1,21 @@
+﻿@model LearnAspDotNetCore.Models.Question6Model
+
+@{
+    ViewData["Title"] = "Questions";
+}
+@using (Html.BeginForm())
+{
+    <h1>String Scrambler</h1>
+    <br/>
+    @Html.LabelFor(m=> m.input)
+    @Html.TextBoxFor(model => model.input )
+    <br/>
+    <br/>
+    @Html.LabelFor(m=> m.output)
+    @Html.DisplayFor(m => m.output )
+    <br/>
+
+    <br/>
+    <input type="submit" value="Scramble" formaction="Question6Result"/>
+}
+

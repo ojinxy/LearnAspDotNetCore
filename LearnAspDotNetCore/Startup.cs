@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
+using LearnAspDotNetCore.Api.Interfaces;
+using LearnAspDotNetCore.Api.Implementations;
 
 namespace LearnAspDotNetCore
 {
@@ -38,6 +40,9 @@ namespace LearnAspDotNetCore
             // Add framework services.
 
             services.AddMvc();
+
+            //Add custom services
+            services.AddSingleton<IScramble, ScrambleReverse>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

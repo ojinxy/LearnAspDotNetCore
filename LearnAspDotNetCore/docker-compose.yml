@@ -13,5 +13,13 @@ services:
         image: nginx
         ports:
             - "8080:8080"
+            - "80:80"
         volumes:
             - ./nginx.conf:/etc/nginx/nginx.conf
+
+    varnish-service:
+        container_name: varnishservice
+        build: ./DockerVarnish
+        ports:
+            - "6081:6081"
+            - "6082:6082"

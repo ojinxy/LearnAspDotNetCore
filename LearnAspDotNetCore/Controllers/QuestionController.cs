@@ -6,6 +6,8 @@ using LearnAspDotNetCore.Logics;
 using LearnAspDotNetCore.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading;
+using Microsoft.Extensions.Logging;
+using LearnAspDotNetCore.Api.Interfaces;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,10 +16,14 @@ namespace LearnAspDotNetCore.Controllers
     public class QuestionController : Controller
     {
         private readonly LearnAspDotNetCoreContext _context;
+        private readonly ILogger _logger;
+        private IScramble _scramble;
 
-        public QuestionController(LearnAspDotNetCoreContext context)
+        public QuestionController(LearnAspDotNetCoreContext context,ILoggerFactory logger, IScramble scramble )
         {
             _context = context;
+            _logger = logger.CreateLogger("TodoApi.Controllers.TodoController");
+            _scramble = scramble;
         }
 
 
@@ -186,6 +192,19 @@ namespace LearnAspDotNetCore.Controllers
 			return View("Question5", q5Model);
 
 		}
+
+        public IActionResult Question6()
+        {
+            return View();
+        }
+
+        public IActionResult Question6Result(Question6Model model)
+        {
+            if(TryValidateModel(model)){
+                model.output = _scramble.scramble(model.input);
+            }
+            return View("Question6", model);
+        }
 
     }
 }

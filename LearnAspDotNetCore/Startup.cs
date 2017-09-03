@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using LearnAspDotNetCore.Api.Interfaces;
 using LearnAspDotNetCore.Api.Implementations;
+using LearnAspDotNetCore.Api.AppSettings;
 
 namespace LearnAspDotNetCore
 {
@@ -35,14 +36,25 @@ namespace LearnAspDotNetCore
 
             // Add framework services.
             Console.WriteLine(Configuration.GetConnectionString("DefaultConnection"));
-            services.AddDbContext<LearnAspDotNetCoreContext>(options => options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));                                             
-				//options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<LearnAspDotNetCoreContext>(options => options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             // Add framework services.
 
             services.AddMvc();
 
             //Add custom services
-            services.AddSingleton<IScramble, ScrambleReverse>();
+            String scrambler = Configuration["AppSettings:Scrambler"];
+
+            switch(scrambler)
+            {
+                case "random" : 
+                    services.AddSingleton<IScramble, ScrambleRandomOrder>();
+                    break;
+                case "reverse": default:
+                    services.AddSingleton<IScramble, ScrambleReverse>();
+                    break;
+            }
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

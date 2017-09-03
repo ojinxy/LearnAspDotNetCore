@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Text;
 using LearnAspDotNetCore.Api.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace LearnAspDotNetCore.Api.Implementations
 {
     public class ScrambleReverse : IScramble
     {
-        public ScrambleReverse()
+        private ILogger _logger;
+
+        public ScrambleReverse(ILoggerFactory logger)
         {
+            _logger = logger.CreateLogger("ScramblerReverse");
+            _logger.LogInformation("ScramblerReverse Service Created.");
         }
 
         public string scramble(string input)

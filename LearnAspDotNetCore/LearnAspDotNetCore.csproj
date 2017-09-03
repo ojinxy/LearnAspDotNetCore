@@ -17,6 +17,7 @@
 		<Folder Include="Api\" />
 		<Folder Include="Api\Interfaces\" />
 		<Folder Include="Api\Implementations\" />
+		<Folder Include="Api\AppSettings\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Remove="proxy.conf" />
@@ -41,5 +42,6 @@
 	  <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.0.0" />
 	  <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />
 	  <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.0.0" />
 	</ItemGroup>
 </Project>
